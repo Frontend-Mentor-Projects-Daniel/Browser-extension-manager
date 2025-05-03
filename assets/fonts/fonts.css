@@ -1,0 +1,16 @@
+/* Variable Font Regular + Italic */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: 100 900; /* Range of available weights */
+  font-stretch: 75% 125%; /* Range of width axis (may vary by font) */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./NotoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
