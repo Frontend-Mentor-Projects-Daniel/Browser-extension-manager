@@ -1,7 +1,15 @@
 {
-  "name": "browser-extensions-manager",
+  "name": "browser-extension-manager",
   "version": "1.0.0",
-  "description": "![Design preview for the Browser extensions manager UI coding challenge](./preview.jpg)",
+  "description": "Frontend Mentor challenge project: Browser Extension Manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frontend-Mentor-Projects-Daniel/Browser-extension-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Frontend-Mentor-Projects-Daniel/Browser-extension-manager/issues"
+  },
+  "homepage": "https://github.com/Frontend-Mentor-Projects-Daniel/Browser-extension-manager#readme",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
