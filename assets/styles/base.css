@@ -112,16 +112,17 @@ select {
 
   /* TYPOGRAPHY */
   /* Font sizes based on a 1rem (16px) base.
-  This scale uses a 1.25 (major third) ratio 
+  This scale uses a 1.5 ratio because the line-height is 1.5
   */
 
-  --font-size--2: 0.64rem; /* 10.24px */
-  --font-size--1: 0.8rem; /* 12.8px */
+  --font-size--2: 0.444rem; /* ~7.1px */
+  --font-size--1: 0.666rem; /* ~10.66px */
   --font-size-0: 1rem; /* 16px */
-  --font-size-1: 1.25rem; /* 20px */
-  --font-size-2: 1.5625rem; /* 25px */
-  --font-size-3: 1.9531rem; /* 31.25px */
-  --font-size-4: 2.4414rem; /* 39.06px */
+  --font-size-1: 1.5rem; /* 24px */
+  --font-size-2: 2.25rem; /* 36px */
+  --font-size-3: 3.375rem; /* 54px */
+  --font-size-4: 5.0625rem; /* ~81px */
+  --font-size-5: 7.5938rem; /* ~121px */
 
   /*
    * Line heights
@@ -204,7 +205,7 @@ select {
 -------------------------*/
 
 [data-theme='dark'] {
-  --color-background: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --color-background: linear-gradient(180deg, #040918 0%, #091540 100%);
 }
 
 [data-theme='light'] {
@@ -214,3 +215,50 @@ select {
 /*----------------------- 
       GLOBAL STYLES
 -------------------------*/
+body {
+  background: var(--color-background);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: var(--font-size-0);
+  line-height: var(--line-height-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-hover);
+}

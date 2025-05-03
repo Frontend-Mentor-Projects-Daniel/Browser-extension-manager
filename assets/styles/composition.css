@@ -1,0 +1,144 @@
+/*----------------------------------*
+  🧱 SHARED BOX STYLES
+  Applies to any block with a border
+*----------------------------------*/
+.box {
+  box-sizing: border-box; /* Include padding and border in the element's total width/height */
+  display: block; /* Ensures the element behaves like a block box */
+  padding: var(--space-xxs); /* Small internal padding for consistent spacing */
+}
+
+.box * {
+  color: inherit; /* Forces all nested elements to inherit parent text color */
+}
+
+/*----------------------------------*
+    🎯 CENTERED CONTENT CONTAINER
+    Horizontally centers content within a readable measure
+    Does NOT center the layout itself
+  *----------------------------------*/
+.center {
+  --measure: 60ch; /* Ideal readable line length (~60 characters) */
+  --text-align: start; /* Optional text alignment override */
+
+  box-sizing: content-box; /* Ensures padding doesn't affect the max-inline-size */
+  padding-inline-start: 1rem; /* Horizontal padding for small screens */
+  padding-inline-end: 1rem;
+
+  margin-inline: auto; /* Horizontally centers the element */
+  max-inline-size: var(--measure); /* Constrains readable width */
+  text-align: var(--text-align);
+}
+
+/*----------------------------------*
+    📚 STACK
+    Vertically stacks children with consistent spacing
+  *----------------------------------*/
+.stack {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0; /* Resets margins for consistent layout */
+}
+
+.stack > * + * {
+  margin-block-start: var(--space-md); /* Adds spacing between siblings */
+}
+
+/*----------------------------------*
+    🧍 COVER LAYOUT
+    Centers one element vertically within the viewport
+    Requires 2+ children
+  *----------------------------------*/
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh; /* Minimum height of viewport */
+  padding: 0;
+}
+
+/* Default vertical spacing between sections (header, main, footer) */
+.cover > * {
+  margin-block: var(--space-md);
+}
+
+/* Remove top margin from first child unless it's intentionally centered */
+.cover > :first-child:not(.centered) {
+  margin-block-start: 0;
+}
+
+/* Remove bottom margin from last child unless it's intentionally centered */
+.cover > :last-child:not(.centered) {
+  margin-block-end: 0;
+}
+
+/* Push centered element to the middle of the available space */
+.cover > .centered {
+  margin-block: auto;
+}
+
+/*----------------------------------*
+    🧩 RESPONSIVE GRID
+    Content-aware layout that adapts to screen size
+
+ -> Using 250px
+
+| Screen Width | Columns | Column Width        |
+| ------------ | ------- | ------------------- |
+| 1400px       | 4       | \~25% each          |
+| 1000px       | 3       | \~33% each          |
+| 600px        | 2       | \~50% each          |
+| 300px        | 1       | 100% (not 250px!) ✅ |
+  *----------------------------------*/
+.grid {
+  display: grid;
+  gap: 1rem; /* Gap between grid items */
+  /* Dynamically fits as many 250px-wide columns as space allows, up to full width */
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+/*----------------------------------*
+    🎨 INLINE ICONS
+    Aligns SVG or <img> icons next to text properly
+  *----------------------------------*/
+.icon {
+  /* Matches capital letter height across fonts */
+  width: 0.75em; /* Fallback */
+  width: 1cap; /* Ideal — uses capital letter height */
+  height: 0.75em;
+  height: 1cap;
+}
+
+.with-icon {
+  display: inline-flex; /* Allows spacing control while remaining inline */
+  align-items: baseline; /* Aligns icon with the text baseline */
+}
+
+.with-icon .icon {
+  margin-inline-end: 1rem; /* Adds space between icon and following text, LTR/RTL aware */
+}
+
+/*----------------------------------*
+    🖼️ FRAME (Aspect Ratio Container)
+    Used for cropping media or content to a fixed ratio
+  *----------------------------------*/
+.frame {
+  --n: 16; /* Numerator (e.g. 16 in 16:9) */
+  --d: 9; /* Denominator (e.g. 9 in 16:9) */
+  aspect-ratio: var(--n) / var(--d); /* Maintains a 16:9 shape (or dynamic ratio) */
+  overflow: hidden; /* Crops anything that overflows the frame */
+  display: flex; /* Centers non-media content */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensures images or videos fill and crop to the frame */
+.frame > img,
+.frame > video {
+  inline-size: 100%; /* Full width of parent */
+  block-size: 100%; /* Full height of parent */
+  object-fit: cover; /* Crops image to fill without distortion */
+}
