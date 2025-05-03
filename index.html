@@ -2,28 +2,59 @@
 <html lang="en">
   <head data-theme="dark">
     <meta charset="UTF-8" />
-    <!-- displays site properly based on user's device -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
       user-scalable="yes"
     />
+    <meta
+      name="description"
+      content="Manage your browser extensions beautifully with a clean UI."
+    />
 
+    <!-- Theme & Web App -->
+    <meta name="theme-color" content="#de473f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Browser Extensions Manager" />
+
+    <!-- Open Graph for social media previews -->
+    <meta property="og:title" content="Browser Extensions Manager" />
+    <meta
+      property="og:description"
+      content="Manage your favorite browser extensions with style and simplicity."
+    />
+    <meta
+      property="og:image"
+      content="https://fastidious-maamoul-676685.netlify.app/assets/images/logo.svg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Preview of browser extensions manager interface"
+    />
+    <meta
+      property="og:url"
+      content="https://fastidious-maamoul-676685.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <title>Frontend Mentor | Browser extensions manager UI</title>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/styles/main.css" />
+
+    <!-- scripts -->
+    <script src="./src/index.js" type="module" defer></script>
+
+    <title>Frontend Mentor | Browser Extensions Manager UI</title>
   </head>
+
   <body>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Daniel Arzanipour</a>.
-    </div>
+    <div id="app"></div>
   </body>
 </html>
