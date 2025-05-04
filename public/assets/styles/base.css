@@ -211,10 +211,22 @@ select {
 /* body bg, header bg, button bg, theme toggle bg, maybe switch?, text*/
 [data-theme='dark'] {
   --color-body-background: var(--dark-gradient);
+  --color-body-text: var(--color-gray-300);
+  --color-header: var(--color-gray-800);
+  --color-headings: var(--color-gray-0);
+  --color-theme_toggle-background: var(--color-gray-700);
+  --color-theme_toggle_hover-background: var(--color-gray-600);
+  --color-logo: var(--color-gray-0);
 }
 
 [data-theme='light'] {
   --color-body-background: var(--light-gradient);
+  --color-body-text: var();
+  --color-header: var();
+  --color-headings: var();
+  --color-theme_toggle-background: var();
+  --color-theme_toggle_hover-background: var();
+  --color-logo: var();
 }
 
 /*----------------------- 
@@ -222,7 +234,7 @@ select {
 -------------------------*/
 body {
   background: var(--color-body-background);
-  color: var(--color-gray-300);
+  color: var(--color-body-text);
   font-family: 'Noto Sans', sans-serif;
   font-size: var(--font-size-0);
   line-height: var(--line-height-normal);
@@ -247,7 +259,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-gray-0);
+  color: var(--color-headings);
   font-weight: var(--font-weight-bold);
 }
 
@@ -272,17 +284,6 @@ h6 {
 p {
 }
 
-a {
-  color: var(--color-primary);
-  text-decoration: underline;
-  transition: color var(--transition-fast);
-}
-
-a:hover,
-a:focus {
-  color: var(--color-primary-hover);
-}
-
 button:focus,
 a:focus,
 input:focus,
@@ -290,4 +291,9 @@ textarea:focus,
 select:focus {
   outline: 0;
   box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* for footer attribution */
+.attribution a {
+  color: var(--color-primary);
 }

@@ -2,21 +2,21 @@
       HEADER 
  -----------------*/
 .header {
-  background-color: var(--color-gray-800);
+  background-color: var(--color-header);
 }
 
 .header__logo {
-  fill: var(--color-gray-0);
+  fill: var(--color-logo);
 }
 
 .header__theme-toggle {
   cursor: pointer;
-  background-color: var(--color-gray-700);
+  background-color: var(--color-theme_toggle-background);
   border: none;
   border-radius: var(--radius-sm);
   transition: var(--transition-base);
 }
 
 .header__theme-toggle:hover {
-  background-color: var(--color-gray-600);
+  background-color: var(--color-theme_toggle_hover-background);
 }
