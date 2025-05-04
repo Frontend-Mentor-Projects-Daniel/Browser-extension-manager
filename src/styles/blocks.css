@@ -3,7 +3,7 @@
  -----------------*/
 .header {
   background-color: var(--color-header);
-  transition: var(--transition-base);
+  transition: var(--transition-slow);
 }
 
 .header__logo {
@@ -11,6 +11,10 @@
 }
 
 .header__theme-toggle {
+  /* center the icon */
+  display: flex;
+  align-items: center;
+
   cursor: pointer;
   background-color: var(--color-theme_toggle-background);
   border: none;
@@ -20,4 +24,8 @@
 
 .header__theme-toggle:hover {
   background-color: var(--color-theme_toggle_hover-background);
+}
+
+.header__icon {
+  stroke: var(--color-theme_toggle_icon-stroke);
 }

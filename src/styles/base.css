@@ -184,8 +184,8 @@ select {
     * Transitions — shared timing
     */
   --transition-fast: 150ms ease;
-  --transition-base: 1s ease;
-  --transition-slow: 500ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 1s ease;
 
   /*
     * Opacity — reusable transparency values
@@ -215,6 +215,7 @@ select {
   --color-headings: var(--color-gray-0);
   --color-theme_toggle-background: var(--color-gray-700);
   --color-theme_toggle_hover-background: var(--color-gray-600);
+  --color-theme_toggle_icon-stroke: var(--color-gray-100);
   --color-logo: var(--color-gray-0);
 }
 
@@ -225,6 +226,7 @@ select {
   --color-headings: var();
   --color-theme_toggle-background: var(--color-gray-100);
   --color-theme_toggle_hover-background: var(--color-gray-300);
+  --color-theme_toggle_icon-stroke: var(--color-gray-700);
   --color-logo: var();
 }
 
