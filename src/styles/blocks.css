@@ -3,6 +3,7 @@
  -----------------*/
 .header {
   background-color: var(--color-header);
+  transition: var(--transition-base);
 }
 
 .header__logo {

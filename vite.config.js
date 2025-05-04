@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    assetsDir: 'assets',
+    assetsDir: 'public/assets',
   },
   server: {
     open: true,

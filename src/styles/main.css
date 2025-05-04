@@ -1,4 +1,4 @@
-@import '../../assets/fonts/fonts.css';
+@import './fonts.css';
 
 /* 1. Base styles (tokens, reset, fonts) */
 @import './base.css';
