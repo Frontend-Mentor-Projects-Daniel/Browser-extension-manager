@@ -7,6 +7,7 @@
 @import './composition.css';
 
 /* 3. Component blocks */
+@import './blocks.css';
 
 /* 4. Utility classes */
 @import './utilities.css';
