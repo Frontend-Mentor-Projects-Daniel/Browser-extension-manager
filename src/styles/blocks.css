@@ -29,3 +29,44 @@
 .header__icon {
   stroke: var(--color-theme_toggle_icon-stroke);
 }
+
+/*------------------
+    FILTER BAR
+ -----------------*/
+.filter-bar {
+  --justify-content: center;
+}
+
+@media (min-width: 529px) {
+  .filter-bar {
+    --justify-content: space-between;
+  }
+}
+
+.filter-bar__filters {
+  --spacer: var(--space-xxs);
+}
+
+@media (min-width: 270px) {
+  .filter-bar__filters {
+    --justify-content: center;
+  }
+}
+
+.filter-bar__filter {
+  --radius: var(--radius-full);
+  --spacer: 0;
+  padding-inline: var(--space-md);
+  padding-block: var(--space-xxs);
+
+  background-color: var(--color-filter-background);
+  color: var(--color-filter);
+}
+
+.filter-bar__filter:hover {
+  background-color: var(--color-filter-hover-background);
+}
+
+.filter-bar__filter:active {
+  background-color: var(--color-filter-active-background);
+}

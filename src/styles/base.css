@@ -217,6 +217,10 @@ select {
   --color-theme_toggle_hover-background: var(--color-gray-600);
   --color-theme_toggle_icon-stroke: var(--color-gray-100);
   --color-logo: var(--color-gray-0);
+  --color-filter: var(--color-gray-100);
+  --color-filter-background: var(--color-gray-700);
+  --color-filter-hover-background: var(--color-gray-600);
+  --color-filter-active-background: var(--color-primary-active);
 }
 
 [data-theme='light'] {
@@ -228,6 +232,10 @@ select {
   --color-theme_toggle_hover-background: var(--color-gray-300);
   --color-theme_toggle_icon-stroke: var(--color-gray-700);
   --color-logo: var();
+  --color-filter: var(-color-gray-700);
+  --color-filter-background: var(--color-gray-0);
+  --color-filter-hover-background: var(--color-gray-300);
+  --color-filter-active-background: var(--color-primary-active);
 }
 
 /*----------------------- 
@@ -265,24 +273,17 @@ h6 {
 }
 
 h1 {
+  font-size: var(--font-size-1);
 }
 
 h2 {
+  font-size: var(--font-size-0);
 }
 
-h3 {
-}
-
-h4 {
-}
-
-h5 {
-}
-
-h6 {
-}
-
-p {
+button {
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-base);
 }
 
 button:focus,
@@ -291,7 +292,7 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: 0;
-  box-shadow: 0 0 0 1px var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary-active);
 }
 
 /* for footer attribution */
