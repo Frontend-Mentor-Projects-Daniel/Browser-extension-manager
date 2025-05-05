@@ -218,6 +218,7 @@ select {
   --color-theme_toggle_icon-stroke: var(--color-gray-100);
   --color-logo: var(--color-gray-0);
   --color-filter: var(--color-gray-100);
+  --color-filter-active: var(--color-gray-700);
   --color-filter-background: var(--color-gray-700);
   --color-filter-hover-background: var(--color-gray-600);
   --color-filter-active-background: var(--color-primary-active);
@@ -233,6 +234,7 @@ select {
   --color-theme_toggle_icon-stroke: var(--color-gray-700);
   --color-logo: var();
   --color-filter: var(-color-gray-700);
+  --color-filter-active: var(--color-gray-100);
   --color-filter-background: var(--color-gray-0);
   --color-filter-hover-background: var(--color-gray-300);
   --color-filter-active-background: var(--color-primary-active);

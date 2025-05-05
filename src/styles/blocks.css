@@ -67,6 +67,8 @@
   background-color: var(--color-filter-hover-background);
 }
 
-.filter-bar__filter:active {
+[data-isActive='true'],
+[data-isActive='true']:hover {
   background-color: var(--color-filter-active-background);
+  color: var(--color-filter-active);
 }
