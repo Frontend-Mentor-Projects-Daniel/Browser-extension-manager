@@ -252,15 +252,13 @@ body {
 }
 
 #app {
-  max-inline-size: 1400px;
-  margin-inline: auto;
-  padding-block: 3rem;
-  padding-inline: 1rem;
+  padding-inline: clamp(1rem, calc(0.4167rem + 4.1667vw), 6rem);
+  padding-block-start: clamp(1rem, calc(0.4074rem + 1.8519vw), 3rem);
 }
 
 @media (min-width: 480px) {
   #app {
-    padding-inline: 6rem;
+    /* padding-inline: 6rem; */
   }
 }
 

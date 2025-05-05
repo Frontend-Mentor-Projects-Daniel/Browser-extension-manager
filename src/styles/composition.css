@@ -162,3 +162,20 @@
   justify-content: var(--justify-content);
   align-items: var(--align-items);
 }
+
+/* For centering layouts */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(1440px, 100%) 1fr;
+}
+
+.wrapper > * {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Allows a child to ignore the parents width and extend from one end of the screen to the other */
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
