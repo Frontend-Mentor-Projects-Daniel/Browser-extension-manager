@@ -30,9 +30,9 @@
   stroke: var(--color-theme_toggle_icon-stroke);
 }
 
-/*------------------
-    FILTER BAR
- -----------------*/
+/*------------------------
+    HOMEPAGE FILTER BAR
+ ------------------------*/
 .filter-bar {
   --justify-content: center;
 }
@@ -44,7 +44,7 @@
 }
 
 .filter-bar__filters {
-  --spacer: var(--space-xxs);
+  --gap: var(--space-xxs);
 }
 
 @media (min-width: 270px) {
@@ -55,9 +55,8 @@
 
 .filter-bar__filter {
   --radius: var(--radius-full);
-  --spacer: 0;
-  padding-inline: var(--space-md);
-  padding-block: var(--space-xxs);
+  --padding-inline: var(--space-md);
+  --padding-block: var(--space-xxs);
 
   background-color: var(--color-filter-background);
   color: var(--color-filter);
@@ -71,4 +70,46 @@
 [data-isActive='true']:hover {
   background-color: var(--color-filter-active-background);
   color: var(--color-filter-active);
+}
+
+/*----------------------------------*
+       ♥️ HOMEPAGE CARD
+*----------------------------------*/
+
+.cards__list-item {
+  list-style-type: none;
+}
+
+.card {
+  background-color: var(--color-card-background);
+}
+
+.card__title {
+  color: var(--color-card-title);
+}
+
+.card__text {
+  color: var(--color-card-text);
+}
+
+.card__remove-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--color-card-button-background);
+  border: 1px solid var(--color-card-button-border);
+  border-radius: var(--radius-full);
+  color: var(--color-card-button-text);
+  font-size: var(--font-size-0);
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+
+.card__remove-button:hover {
+  background-color: var(--color-card-button-background-hover);
+  color: var(--color-card-button-text-hover);
+}
+
+.card__switch {
 }

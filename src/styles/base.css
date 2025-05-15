@@ -121,7 +121,7 @@ select {
   */
 
   --font-size--2: 0.444rem; /* ~7.1px */
-  --font-size--1: 0.666rem; /* ~10.66px */
+  --font-size--1: 0.875rem; /* 14px */
   --font-size-0: 1rem; /* 16px */
   --font-size-1: 1.5rem; /* 24px */
   --font-size-2: 2.25rem; /* 36px */
@@ -209,35 +209,66 @@ select {
          THEMES
 -------------------------*/
 [data-theme='dark'] {
+  /* GLOBAL */
+  --color-headings: var(--color-gray-0);
+  /* BODY */
   --color-body-background: var(--dark-gradient);
   --color-body-text: var(--color-gray-300);
+  /* HEADER */
   --color-header: var(--color-gray-800);
-  --color-headings: var(--color-gray-0);
   --color-theme_toggle-background: var(--color-gray-700);
   --color-theme_toggle_hover-background: var(--color-gray-600);
   --color-theme_toggle_icon-stroke: var(--color-gray-100);
   --color-logo: var(--color-gray-0);
+  /* FILTER BAR */
   --color-filter: var(--color-gray-100);
   --color-filter-active: var(--color-gray-700);
   --color-filter-background: var(--color-gray-700);
   --color-filter-hover-background: var(--color-gray-600);
   --color-filter-active-background: var(--color-primary-active);
+  /* CARD GRID */
+  --color-card-background: var(--color-gray-800);
+  --color-card-title: var(--color-gray-100);
+  --color-card-text: var(--color-gray-400);
+  --color-card-button-text: var(--color-gray-100);
+  --color-card-button-text-hover: var(--color-gray-900);
+  --color-card-button-background: var(--color-gray-900);
+  --color-card-button-background-hover: var(--color-primary-hover);
+  --color-card-button-border: var(--color-gray-700);
+  --color-card-button-switch-background-active: ;
+  --color-card-button-switch-background-inactive: ;
 }
 
 [data-theme='light'] {
+  /* GLOBAL */
+  --color-headings: var();
+  /* BODY */
   --color-body-background: var(--light-gradient);
   --color-body-text: var();
+  /* HEADER */
   --color-header: var(--color-gray-0);
-  --color-headings: var();
   --color-theme_toggle-background: var(--color-gray-100);
   --color-theme_toggle_hover-background: var(--color-gray-300);
   --color-theme_toggle_icon-stroke: var(--color-gray-700);
   --color-logo: var();
+  /* HOMEPAGE FILTER */
   --color-filter: var(-color-gray-700);
   --color-filter-active: var(--color-gray-100);
   --color-filter-background: var(--color-gray-0);
   --color-filter-hover-background: var(--color-gray-300);
   --color-filter-active-background: var(--color-primary-active);
+  /* HOMEPAGE CARD GRID */
+  --color-card-background: var(--color-gray-0);
+  --color-card-title: ;
+  --color-card-text: ;
+  --color-card-button-text: ;
+  --color-card-button-text-hover: ;
+  --color-card-button-background: ;
+  --color-card-button-background-hover: ;
+  --color-card-button-border: var(--color-gray-300);
+  --color-card-button-border-hover: var(--color-primary-hover);
+  --color-card-button-switch-background-active: ;
+  --color-card-button-switch-background-inactive: ;
 }
 
 /*----------------------- 
@@ -254,12 +285,6 @@ body {
 #app {
   padding-inline: clamp(1rem, calc(0.4167rem + 4.1667vw), 6rem);
   padding-block-start: clamp(1rem, calc(0.4074rem + 1.8519vw), 3rem);
-}
-
-@media (min-width: 480px) {
-  #app {
-    /* padding-inline: 6rem; */
-  }
 }
 
 h1,

@@ -1,14 +1,33 @@
 /*----------------------------------*
+            GUIDELINES
+*----------------------------------*/
+/* 
+--padding-inline -> padding inline
+--padding-block -> padding block
+
+--radius -> radius
+--measure -> max width or max inline size
+
+--spacer -> margin
+
+*/
+
+/*----------------------------------*
   🧱 SHARED BOX STYLES
   Applies to any block with a border
 *----------------------------------*/
 .box {
   --radius: var(--radius-md);
-  --spacer: var(--space-sm);
+  --padding-inline: var(--space-sm);
+  --padding-block: var(--space-sm);
+
   box-sizing: border-box; /* Include padding and border in the element's total width/height */
   border-radius: var(--radius);
   display: block; /* Ensures the element behaves like a block box */
-  padding: var(--spacer); /* Small internal padding for consistent spacing */
+  padding-inline: var(
+    --padding-inline
+  ); /* Small internal padding for consistent spacing */
+  padding-block: var(--padding-block);
 }
 
 .box * {
@@ -26,7 +45,7 @@
 
   box-sizing: content-box; /* Ensures padding doesn't affect the max-inline-size */
   padding-inline-start: 1rem; /* Horizontal padding for small screens */
-  padding-inline-end: 1rem;
+  padding-inline-end: 1rem; /* This should also be a custom variable */
 
   margin-inline: auto; /* Horizontally centers the element */
   max-inline-size: var(--measure); /* Constrains readable width */
@@ -61,6 +80,7 @@
   *----------------------------------*/
 .cover {
   --spacer: var(--space-md);
+
   display: flex;
   flex-direction: column;
   min-block-size: 100vh; /* Minimum height of viewport */
@@ -101,10 +121,12 @@
 | 300px        | 1       | 100% (not 250px!) ✅ |
   *----------------------------------*/
 .grid {
+  --min: 315px;
+
   display: grid;
   gap: 1rem; /* Gap between grid items */
   /* Dynamically fits as many 250px-wide columns as space allows, up to full width */
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
 }
 
 /*----------------------------------*
@@ -154,11 +176,11 @@
 .cluster {
   --justify-content: space-between;
   --align-items: center;
-  --spacer: var(--space-sm);
+  --gap: var(--space-sm);
 
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacer);
+  gap: var(--gap);
   justify-content: var(--justify-content);
   align-items: var(--align-items);
 }
