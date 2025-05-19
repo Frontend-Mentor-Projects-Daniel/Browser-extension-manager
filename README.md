@@ -13,7 +13,6 @@ Thanks for checking out my solution to the **Browser Extensions Manager** challe
 - [Overview](#overview)
 - [Built With](#built-with)
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [What I Learned](#what-i-learned)
 - [Useful Resources](#useful-resources)
 - [Links](#links)
@@ -72,6 +71,8 @@ Users can:
 - **Theming**: Switched themes using `[data-theme]` + CSS custom properties
 
 - **Gradients**: CSS can't animate them directly; used `Granim.js`
+
+- While some of the ideas for the clean architecture were nice, it wound up giving more problems instead, will most likely take a few points or ideas and add them to my own setup
 
 ---
 
