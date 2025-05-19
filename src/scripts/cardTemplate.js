@@ -27,6 +27,17 @@ function togglePillSwitch(pillSwitch) {
   }
 }
 
+function removeCard() {
+  const cardsList = document.querySelectorAll('.cards__list-item');
+  cardsList.forEach((card) => {
+    const removeBtn = card.querySelector('.card__remove-button');
+    if (removeBtn instanceof HTMLButtonElement)
+      removeBtn.addEventListener('click', () => {
+        card.remove();
+      });
+  });
+}
+
 async function loadCards() {
   const res = await fetch('assets/data/data.json');
   if (!res.ok) {
@@ -51,6 +62,8 @@ async function loadCards() {
   pillSwitch.forEach((sw) => {
     togglePillSwitch(sw);
   });
+
+  removeCard();
 }
 
 loadCards();

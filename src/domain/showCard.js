@@ -41,7 +41,6 @@ function updateCardsList(filterStatus) {
     if (filterStatus === 'Active') {
       cardsList.forEach((card) => {
         if (card.dataset.status !== 'active') {
-          console.log(card);
           card.classList.add('hidden');
         } else {
           card.classList.remove('hidden');
