@@ -238,6 +238,7 @@ select {
   --color-card-button-switch-background-active: var(--color-primary-active);
   --color-card-button-switch-background-inactive: var(--color-gray-600);
   --color-card-button-switch-background-indicator: var(--color-gray-0);
+  --color-card-button-switch-background-indicator-border: var(--color-gray-600);
 }
 
 [data-theme='light'] {
@@ -260,16 +261,18 @@ select {
   --color-filter-active-background: var(--color-primary-active);
   /* HOMEPAGE CARD GRID */
   --color-card-background: var(--color-gray-0);
-  --color-card-title: ;
-  --color-card-text: ;
-  --color-card-button-text: ;
-  --color-card-button-text-hover: ;
-  --color-card-button-background: ;
-  --color-card-button-background-hover: ;
+  --color-card-title: var(--color-gray-600);
+  --color-card-text: var(--color-gray-300);
+  --color-card-button-text: var(--color-gray-900);
+  --color-card-button-text-hover: var(--color-gray-100);
+  --color-card-button-background: var(--color-gray-0);
+  --color-card-button-background-hover: var(--color-primary-hover);
   --color-card-button-border: var(--color-gray-300);
   --color-card-button-border-hover: var(--color-primary-hover);
-  --color-card-button-switch-background-active: ;
-  --color-card-button-switch-background-inactive: ;
+  --color-card-button-switch-background-active: var(--color-primary-active);
+  --color-card-button-switch-background-inactive: var(--color-gray-300);
+  --color-card-button-switch-background-indicator: var(--color-gray-0);
+  --color-card-button-switch-background-indicator-border: var(--color-gray-300);
 }
 
 /*----------------------- 

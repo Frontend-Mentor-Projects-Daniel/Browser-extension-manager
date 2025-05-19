@@ -80,14 +80,6 @@
   list-style-type: none;
 }
 
-/* .cards__list-item[data-status='active'] {
-  display: block;
-}
-
-.cards__list-item[data-status='inactive'] {
-  display: none;
-} */
-
 .card {
   background-color: var(--color-card-background);
 }
@@ -134,6 +126,7 @@
   left: 0;
 
   background-color: var(--color-card-button-switch-background-indicator);
+  border: 1px solid var(--color-card-button-switch-background-indicator-border);
   border-radius: 50%;
   display: inline-block;
   height: 1.5rem;
