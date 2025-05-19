@@ -86,7 +86,7 @@ select {
      DESIGN SYSTEM
 -------------------------*/
 :root {
-  /* colorS */
+  /* colors */
   /* brand */
   --color-primary: hsl(3, 71%, 56%);
   --color-primary-hover: hsl(3, 77%, 44%);
