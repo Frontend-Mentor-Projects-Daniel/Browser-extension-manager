@@ -235,8 +235,9 @@ select {
   --color-card-button-background: var(--color-gray-900);
   --color-card-button-background-hover: var(--color-primary-hover);
   --color-card-button-border: var(--color-gray-700);
-  --color-card-button-switch-background-active: ;
-  --color-card-button-switch-background-inactive: ;
+  --color-card-button-switch-background-active: var(--color-primary-active);
+  --color-card-button-switch-background-inactive: var(--color-gray-600);
+  --color-card-button-switch-background-indicator: var(--color-gray-0);
 }
 
 [data-theme='light'] {

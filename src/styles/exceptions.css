@@ -47,6 +47,6 @@
   --spacer: var(--space-lg);
 
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
 }

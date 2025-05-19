@@ -112,4 +112,32 @@
 }
 
 .card__switch {
+  position: relative;
+
+  background-color: var(--color-card-button-switch-background-inactive);
+  border-radius: var(--radius-full);
+  height: 1.5rem;
+  width: 3rem;
+}
+
+.card__status-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-card-button-switch-background-indicator);
+  border-radius: 50%;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+
+  transition: var(--transition-base);
+}
+
+.card__switch[aria-pressed='true'] {
+  background-color: var(--color-card-button-switch-background-active);
+}
+
+.card__switch[aria-pressed='true'] .card__status-indicator {
+  left: 1.5rem;
 }

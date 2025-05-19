@@ -40,7 +40,12 @@
               <div class="card__bottom">
                 <button class="card__remove-button box">Remove</button>
 
-                <button class="card__switch">Switch</button>
+                <button class="card__switch" aria-pressed="false">
+                  <span class="card__status-indicator"></span>
+                  <span class="visually-hidden card__status-indicator-text"
+                    >Extension Inactive</span
+                  >
+                </button>
               </div>
             </div>
           </li>
