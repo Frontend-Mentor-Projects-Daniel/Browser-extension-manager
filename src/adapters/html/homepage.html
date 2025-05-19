@@ -4,11 +4,11 @@
       <h1 class="filter-bar__title">Extensions List</h1>
 
       <div class="filter-bar__filters cluster">
-        <button class="filter-bar__filter box" data-isActive="true">All</button>
-        <button class="filter-bar__filter box" data-isActive="false">
+        <button class="filter-bar__filter box" aria-pressed="true">All</button>
+        <button class="filter-bar__filter box" aria-pressed="false">
           Active
         </button>
-        <button class="filter-bar__filter box" data-isActive="false">
+        <button class="filter-bar__filter box" aria-pressed="false">
           Inactive
         </button>
       </div>
@@ -17,7 +17,7 @@
     <div class="cards">
       <ul class="cards__list grid">
         <template id="homepage-card-template">
-          <li class="cards__list-item center">
+          <li class="cards__list-item center" data-status="active">
             <div class="card box stack">
               <div class="card__top center">
                 <div class="card__logo">
@@ -40,7 +40,7 @@
               <div class="card__bottom">
                 <button class="card__remove-button box">Remove</button>
 
-                <button class="card__switch" aria-pressed="false">
+                <button class="card__switch">
                   <span class="card__status-indicator"></span>
                   <span class="visually-hidden card__status-indicator-text"
                     >Extension Inactive</span

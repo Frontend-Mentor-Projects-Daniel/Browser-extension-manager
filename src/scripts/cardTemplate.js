@@ -1,7 +1,8 @@
-function createCard({ title, text, logoSrc, logoAlt }) {
+function createCard({ title, text, logoSrc, logoAlt, isActive }) {
   const template = document.getElementById('homepage-card-template');
   const clone = template.content.cloneNode(true);
 
+  clone.querySelector('.card__switch').setAttribute('aria-pressed', isActive);
   clone.querySelector('.card__title').textContent = title;
   clone.querySelector('.card__text').textContent = text;
 
@@ -34,12 +35,13 @@ async function loadCards() {
   const data = await res.json();
 
   const list = document.querySelector('.cards__list');
-  data.forEach(({ name, description, logo }) => {
+  data.forEach(({ name, description, logo, isActive }) => {
     const card = createCard({
       title: name,
       text: description,
       logoSrc: logo,
       logoAlt: name,
+      isActive,
     });
 
     list.appendChild(card);

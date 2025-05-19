@@ -66,8 +66,8 @@
   background-color: var(--color-filter-hover-background);
 }
 
-[data-isActive='true'],
-[data-isActive='true']:hover {
+.filter-bar__filter[aria-pressed='true'],
+.filter-bar__filter[aria-pressed='true']:hover {
   background-color: var(--color-filter-active-background);
   color: var(--color-filter-active);
 }
@@ -79,6 +79,14 @@
 .cards__list-item {
   list-style-type: none;
 }
+
+/* .cards__list-item[data-status='active'] {
+  display: block;
+}
+
+.cards__list-item[data-status='inactive'] {
+  display: none;
+} */
 
 .card {
   background-color: var(--color-card-background);
