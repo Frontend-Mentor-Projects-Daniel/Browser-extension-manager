@@ -13,7 +13,10 @@ function createCard({ title, text, logoSrc, logoAlt }) {
 }
 
 async function loadCards() {
-  const res = await fetch('src/infrastructure/data/data.json');
+  const res = await fetch('assets/data/data.json');
+  if (!res.ok) {
+    throw new Error(`Failed to load JSON: ${res.status}`);
+  }
   const data = await res.json();
 
   const list = document.querySelector('.cards__list');
